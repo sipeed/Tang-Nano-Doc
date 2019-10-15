@@ -11,7 +11,7 @@ Tang Nano 文档
 
 Lichee Tang Nano 是基于高云小蜜蜂系列 GW1N-1 FPGA 的简约型开发板。
 
-该芯片搭载了 1152 LUT4 的逻辑资源，1 PLL 和 4 Block 合计 72Kbit SRAM，开发板引出了所有 I/O 接口，适用于小型数字逻辑的设计和实验。
+该芯片搭载了 1152 LUT4 的逻辑资源，1 PLL 和 4 Block 合计 72Kbit SRAM，封装为 QFN48。开发板引出了所有 I/O 接口，适用于小型数字逻辑的设计和实验。
 
 板载 64Mbits PSRAM，为 FPGA 提供了丰富的存储资源。
 
@@ -32,4 +32,5 @@ Lichee Tang Nano 是基于高云小蜜蜂系列 GW1N-1 FPGA 的简约型开发�
 
 + [高云官方下载站](http://www.gowinsemi.com.cn/faq.aspx)
 + [dl 下载站](http://dl.sipeed.com/TANG/Nano)
++ [Tang nano 原理图](http://dl.sipeed.com/TANG/Nano/HDK/Tang-NANO-2704(Schematic).pdf)
 
