@@ -4,6 +4,8 @@
 
 在看这篇文档前，请再次确定自己看过[Gowin云源软件用户指南](http://cdn.gowinsemi.com.cn/SUG100-1.8_Gowin%E4%BA%91%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.pdf)，第5章 云源软件使用
 
+本实验的源码地址：[https://github.com/sipeed/Tang-Nano-examples/tree/master/example_led](https://github.com/sipeed/Tang-Nano-examples/tree/master/example_led)
+
 # Verilog 预备知识
 
 这里只介绍接下来会用到的相关语法，更多的可以参考《Verilog 数字系统设计教程》
