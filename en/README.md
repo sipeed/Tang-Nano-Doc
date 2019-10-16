@@ -1,3 +1,0 @@
-Tang Nano Documentation
-======
-
