@@ -2,7 +2,7 @@
 
 进入官网 http://www.gowinsemi.com.cn/faq.aspx ，可以看到如下图的软件列表，选择适合电脑的系统的版本进行下载
 
-![1-1](../../assets/gowin_down.png)
+![1-1](./../../assets/gowin_down.png)
 
 # 安装
 
