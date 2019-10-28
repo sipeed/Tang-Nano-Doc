@@ -72,20 +72,20 @@ TODO
 setx LM_LICENSE_FILE path_to_the_file
 ```
 
-**第二种：使用 sipeed 的 licence 服务器联网激活(不推荐)**
+**第二种：使用 sipeed 的 licence 服务器联网激活**
 
-由于 licence 服务器在国内访问不稳定，导致软件有时候无法打开，不推荐
+这种方式配置起来简单，不过没有网络的情况下无法使用软件
 
-下载好软件打开后，软件会提示需要 licence，在弹出框中填入服务器地址 `50.116.30.241` 即可，IDE端口：10559
+下载好软件打开后，软件会提示需要 licence，在弹出框中填入服务器地址 `45.33.107.56` 即可，IDE端口：10559
 
 ![3-6](../../assets/lic_remote_1.png)
 
-synopsys 高级功能的激活需要在系统中添加环境变量 `LM_LICENSE_FILE=27020@50.116.30.241`
+synopsys 高级功能的激活需要在系统中添加环境变量 `LM_LICENSE_FILE=27020@45.33.107.56`
 
 **Windows** 用户在键盘上按 win+r 键，在弹出的运行窗口输入 `cmd`，点击确定后会弹出黑色命令行窗口，在里面输入下面命令
 
 ```
-setx LM_LICENSE_FILE 27020@50.116.30.241
+setx LM_LICENSE_FILE 27020@45.33.107.56
 ```
 
 Windows 除了命令行的方式添加，也可以通过 右键电脑->属性->环境变量 ，然后如下图进行添加
@@ -95,7 +95,7 @@ Windows 除了命令行的方式添加，也可以通过 右键电脑->属性->�
 **Linux** 用户需要在 `~/.bashrc` 中添加
 
 ```
-export LM_LICENSE_FILE 27020@50.116.30.241
+export LM_LICENSE_FILE 27020@45.33.107.56
 ```
 
 进入 IDE 后，点击 Tools 中的 `Synplify Pro`
