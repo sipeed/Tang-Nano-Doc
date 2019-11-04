@@ -1,6 +1,6 @@
 # Instance process
 
-New Project -> Add Source Code File -> Add Timing, Pin Constraints -> Synthesis -> Burn
+New Project -> Add Source Code File -> Add Timing, Pin Constraints -> Synthesis -> Programe
 
 Before reading this document, please make sure you have seen [Gowin Cloud Source Software User Guide] (http://cdn.gowinsemi.com.cn/SUG100-1.8_Gowin%E4%BA%91%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.pdf), Chapter 5 Cloud Source Software Usage
 
@@ -8,7 +8,7 @@ The source code of this experiment: [https://github.com/sipeed/Tang-Nano-example
 
 # Verilog Prerequisites
 
-Here only introduce the relevant syntax that will be used next, more can refer to "Verilog Digital System Design Tutorial"
+Here only introduce the relevant syntax that will be used next, more can refer to [Verilog Tutorial](http://www.asic-world.com/verilog/veritut.html)
 
 The basic design unit of Verilog is the module, and each Verilog program consists of four main parts: port definition, I/O description, internal signal declaration and function definition.
 
@@ -17,16 +17,16 @@ The module is like the black box we usually mentioned. When we implement the mod
 a module grows like this
 
 ```
-Module block (input a, output b);
-Reg [width-1:0] R_1;
+module block (input a, output b);
+reg [width-1:0] R_1;
 
-Assign b = a;
-Always @(posedge clk or negedge reset_n)
-Begin
+assign b = a;
+always @(posedge clk or negedge reset_n)
+begin
 // do something
-End
+end
 
-Endmodule
+endmodule
 ```
 
 The overall structure of the module consists of module and endmodule. The module is followed by the definition of the module interface, which declares whether the direction of the port is input or output.
@@ -37,7 +37,7 @@ The definition of the function can be done through the assign and always blocks.
 
 # Pin usage
 
-The onboard is a three-color RGB light, the schematic is as follows
+The onboard is a RGB(tri-color) LED, the schematic is as follows
 
 ![](../../assets/examples/led_pjt_1.png)
 
@@ -47,9 +47,9 @@ The pin distribution used by the entire program is as follows
 | --------- | ------ | --- | ---------- |
 | sys_clk | input | 35 | Clock Input Pin |
 | sys_rst_n | input | 15 | System Reset Foot |
-| led[0] | output | 16 | Green Light |
-| led[1] | output | 17 | Blue Light |
-| led[2] | output | 18 | Red Light |
+| led[0] | output | 16 | Green LED |
+| led[1] | output | 17 | Blue LED |
+| led[2] | output | 18 | Red LED |
 
 # Programming
 
@@ -58,33 +58,33 @@ The clock of this system is 24Mhz, one machine cycle is 1/24M s, which means 0.5
 In the program, calculate 12000000 clock cycles by counter, and wait for 0.5s. After the time is up, set counter to 0 and change the color of the LED.
 
 ```
-Module led (
-    Input sys_clk, // clk input
-    Input sys_rst_n, // reset input
-    Output reg [2:0] led // 110 G, 101 R, 011 B
+module led (
+    input sys_clk, // clk input
+    input sys_rst_n, // reset input
+    output reg [2:0] led // 110 G, 101 R, 011 B
 );
 
-Reg [23:0] counter;
+reg [23:0] counter;
 
-Always @(posedge sys_clk or negedge sys_rst_n) begin
-    If (!sys_rst_n)
-        Counter <= 24'd0;
-    Else if (counter < 24'd1200_0000) // 0.5s delay
-        Counter <= counter + 1;
-    Else
-        Counter <= 24'd0;
-End
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        counter <= 24'd0;
+    else if (counter < 24'd1200_0000) // 0.5s delay
+        counter <= counter + 1;
+    else
+        counter <= 24'd0;
+end
 
-Always @(posedge sys_clk or negedge sys_rst_n) begin
-    If (!sys_rst_n)
-        Led <= 3'b110;
-    Else if (counter == 24'd1200_0000) // 0.5s delay
-        Led[2:0] <= {led[1:0], led[2]};
-    Else
-        Led <= led;
-End
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        led <= 3'b110;
+    else if (counter == 24'd1200_0000) // 0.5s delay
+        led[2:0] <= {led[1:0], led[2]};
+    else
+        led <= led;
+end
 
-Endmodule
+endmodule
 ```
 
 # Pin constraint
@@ -101,13 +101,13 @@ In the pop-up window, switch to Package View, drag the port under Ports to the c
 
 ![](../../assets/examples/led_pjt_3.png)
 
-# Comprehensive
+# Synthesis
 
 In the workspace on the left, right-click Synthesize or Place&Route, there will be a run option, click
 
 ![](../../assets/examples/led_pjt_4.png)
 
-# Burn to the development board
+# Programe
 
 There are two options, one is to burn to sram, the other is to burn to flash.
 
