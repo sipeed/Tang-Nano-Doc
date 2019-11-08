@@ -22,45 +22,13 @@ TODO
 
 # license
 
-Gao Yunyun source software requires a license to use, the current software license is provided free of charge, you can apply in [official website] (http://www.gowinsemi.com.cn/faq_view.aspx)
-
-However, the way to apply on the official website is cumbersome. In order to facilitate development, you can use Gaoyun software through the sipeed license server.
-
 There are currently two ways to license.
 
-**The first type: use the stand-alone version of the licence (requires modification of the mac)**
+**The first type: use the stand-alone version of the licence (need to apply for license)**
 
-This method needs to modify the MAC address of the network card through the registry.
+Gao Yunyun source software requires a license to use, the current software license is provided free of charge, you can apply in [official website] (http://www.gowinsemi.com.cn/faq_view.aspx)
 
-Press `ctrl+r` and type `regedit` in the pop-up window to open the registry.
-
-First find this path under the registry `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}`
-
-Under this path, there are many sub-paths, starting from 0000, click to view details.
-
-![3-1](../../assets/lic_file_1.png)
-
-See `DriverDesc` which says the name of the network adapter.
-
-In the win10 `network and Intel` settings, there is a `change adapter` option, you can see your own network adapter on the machine, just click one of the adapters.
-
-![3-2](../../assets/lic_file_2.png)
-
-Back in the registry, we need to add `NetworkAddress` like the red box in Figure 3-1 and change the value to `94C691A91EB6`
-
-Add items can be in the blank space `Right-> New -> String`, as shown in the figure
-
-![3-3](../../assets/lic_file_3.png)
-
-Finally, type `ipconfig /all` in the system command line. You can see whether the modification takes effect in the command output.
-
-![3-4](../../assets/lic_file_4.png)
-
-It should be noted here that in the newer version of win10, it seems that the physical network card cannot be modified by modifying the registry. It may be necessary to add a virtual network card to modify it. The modified virtual network card of vmware is modified here.
-
-Here you need to download two offline licences, [gowin](../../assets/files/gowin.lic) and [synplifypro](../../assets/files/gowin_Synplifypro.lic)
-
-When you open the High Cloud IDE, in the license management that pops up, select your local gowin.lic path.
+When you open the High Cloud IDE, in the license management that pops up, select your local license path.
 
 ![3-5](../../assets/lic_file_5.png)
 

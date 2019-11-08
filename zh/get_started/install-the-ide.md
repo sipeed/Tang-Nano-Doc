@@ -22,45 +22,13 @@ TODO
 
 # license
 
-高云云源软件需要 license 才能使用，目前软件的 license 是免费提供的，可以在[官网进行申请](http://www.gowinsemi.com.cn/faq_view.aspx)
-
-不过在官网申请的方式比较麻烦，为了方便开发，可以通过 sipeed 的 licence 服务器使用高云软件
-
 现目前有两种方式进行 license
 
-**第一种：使用单机版 licence(需要修改mac)**
+**第一种：使用单机版 licence(需要申请 licence)**
 
-这种方式需要通过注册表修改网卡的 MAC
+高云云源软件需要 license 才能使用，目前软件的 license 是免费提供的，可以在[官网进行申请](http://www.gowinsemi.com.cn/faq_view.aspx)
 
-按下 `ctrl+r` ，在弹出窗口中输入 `regedit` 打开注册表
-
-先在注册表下找到这个路径 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}`
-
-在这个路径下，有很多子路径，从 0000 开始，单击可以查看详情
-
-![3-1](../../assets/lic_file_1.png)
-
-看到 `DriverDesc` 这里写着这个网络适配器的名字
-
-在 win10 `网络和 Intel` 设置中，有个 `更改适配器` 选项，打开后就可以看到自己本机上的网络适配器，刚刚点击的就是其中一个适配器
-
-![3-2](../../assets/lic_file_2.png)
-
-回到注册表中，我们需要像图 3-1 中红框部分一样，添加 `NetworkAddress` ，并把值修改为 `94C691A91EB6`
-
-填加项可以在空白处 `右键 -> 新建 -> 字符串` ，如图
-
-![3-3](../../assets/lic_file_3.png)
-
-最后在系统命令行中输入 `ipconfig /all` ，在命令输出内容中可以看到修改是否生效
-
-![3-4](../../assets/lic_file_4.png)
-
-这里需要注意的是， win10 较新的版本中，似乎无法通过修改注册表的方式修改物理网卡，可能需要添加虚拟网卡才能进行修改，这里修改的就是 vmware 的虚拟网卡
-
-这里需要下载两个离线 licence ，[gowin](../../assets/files/gowin.lic) 和 [synplifypro](../../assets/files/gowin_Synplifypro.lic)
-
-在打开高云 IDE 的时候，在弹出的 licence 管理中，选择自己本地的 gowin.lic 的路径，即可
+在打开高云 IDE 的时候，在弹出的 licence 管理中，选择自己本地的 license 的路径，即可
 
 ![3-5](../../assets/lic_file_5.png)
 
