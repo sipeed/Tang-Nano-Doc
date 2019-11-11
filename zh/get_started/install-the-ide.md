@@ -26,7 +26,21 @@ TODO
 
 **第一种：使用单机版 licence(需要申请 licence)**
 
-高云云源软件需要 license 才能使用，目前软件的 license 是免费提供的，可以在[官网进行申请](http://www.gowinsemi.com.cn/faq_view.aspx)
+发送申请邮件到 `Support@sipeed.com` ，标题为 `【Apply Tang Lic】MAC: xxxxxx`，内容模板如下
+
+```
+公司名称:
+公司网站:
+部门:
+联系人姓名:
+联系人电话:
+联系人邮箱:
+联系人省份:
+计算机MAC地址:
+license类型:共享型 仅本机
+操作系统类型:Windows Linus
+代理商推荐:群策电子 致远达科技 算科电子 欣华隆科技 北高智科技 晶立达科技 其他
+```
 
 在打开高云 IDE 的时候，在弹出的 licence 管理中，选择自己本地的 license 的路径，即可
 

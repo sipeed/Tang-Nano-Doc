@@ -26,7 +26,19 @@ There are currently two ways to license.
 
 **The first type: use the stand-alone version of the licence (need to apply for license)**
 
-Gao Yunyun source software requires a license to use, the current software license is provided free of charge, you can apply in [official website] (http://www.gowinsemi.com.cn/faq_view.aspx)
+Send an application email to `Support@sipeed.com` under the heading `[Apply Tang Lic] MAC: XXXXXX`. The content template is as follows
+
+```
+Company Name:
+Company Website:
+Department:
+Contact Person:
+Contact No.:
+Email:
+Media Access Control Address(MAC):
+Type of License: Shared Type, Local Only
+Operating System: Windows, Linux
+```
 
 When you open the High Cloud IDE, in the license management that pops up, select your local license path.
 
