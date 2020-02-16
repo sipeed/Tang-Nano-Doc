@@ -1,0 +1,549 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lighting tutorial · Tang Nano DOC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sipeed">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-title/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2_lcd.html" />
+    
+    
+    <link rel="prev" href="../get_started/install-the-ide.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+    <nav role="navigation" class="autoshow">
+        <ul class="summary">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/icon_sipeed2.png" height="30" /></a></li>
+        <li><a href="#" class="btn" onclick="toggleLanguage()">中文</a></li>
+        
+        
+        <li class="version-link">
+            <a href="#" class="btn" style="color:#444"></i>Version: <span style="font-weight: bold; display: inline"><i class='fa fa-angle-down'></i></span></a>
+            <ul class="hovershow">
+                
+                <li><a href="/en/" class="btn">Version: <span style="font-weight:bold; display: inline">master</span></a></li>
+                
+                <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold; display: inline">dev</span></a></li>
+                
+            </ul>
+        </li>                
+        
+                 
+        
+        
+        <li><a href="http://blog.sipeed.com" class="btn" target="_blank"><i></i>Blog</a></li>
+        
+    
+        
+        <li><a href="https://bbs.sipeed.com/" class="btn" target="_blank"><i></i>BBS</a></li>
+        
+    
+        
+        <li>
+            <a href="#" class="btn"><i ></i>Feedback</a>
+            <ul>
+                
+                <li><a href="https://github.com/sipeed/Tang-Nano-DOC/issues" class="btn" target="_blank">doc</a></li>
+                
+                <li><a href="https://github.com/sipeed/Tang-Nano-DOC/issues" class="btn" target="_blank">Source code</a></li>
+                
+            </ul>
+        </li>                
+        
+          
+        </ul>
+    </nav>
+    
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Introduction</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About Tang Nano
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Ready</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../get_started/install-the-ide.html">
+            
+                <a href="../get_started/install-the-ide.html">
+            
+                    
+                    IDE installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Example</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="1_led.html">
+            
+                <a href="1_led.html">
+            
+                    
+                    Lighting tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="2_lcd.html">
+            
+                <a href="2_lcd.html">
+            
+                    
+                    Point LCD tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="3_psram.md">
+            
+                <span>
+            
+                    
+                    Use PSRAM storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="sipeed-navbar navbar-collapse" id="navbar" role="navigation">
+    <ul class="nav navbar-nav">
+        <li><a href="https://www.sipeed.com" class="btn" target="_blank"><img src="/assets/icon_sipeed2.png" height="30" /></a></li>
+        <li><a href="#" class="btn autohide" onclick="toggleLanguage()">中文</a></li>
+
+    
+    <li><a href="http://blog.sipeed.com" class="btn autohide" target="_blank"><i ></i>Blog</a></li>
+    
+
+    
+    <li><a href="https://bbs.sipeed.com/" class="btn autohide" target="_blank"><i ></i>BBS</a></li>
+    
+
+    
+    <li>
+        <a href="#" class="btn autohide"><i ></i>Feedback</a>
+        <ul class="hovershow">
+            
+            <li><a href="https://github.com/sipeed/Tang-Nano-DOC/issues" class="btn" target="_blank">doc</a></li>
+            
+            <li><a href="https://github.com/sipeed/Tang-Nano-DOC/issues" class="btn" target="_blank">Source code</a></li>
+            
+        </ul>
+    </li>                
+    
+    
+
+    
+    <li class="version-link">
+        <a class="btn">Version <span style="font-weight:bold"><i class='fa fa-angle-down'></i></span></a>
+        <ul class="hovershow">
+            
+            <li><a href="/en/" class="btn">Version: <span style="font-weight:bold">master</span></a></li>
+            
+            <li><a href="/dev/en/" class="btn">Version: <span style="font-weight:bold">dev</span></a></li>
+            
+        </ul>
+    </li>                
+    
+   
+    </ul>
+</div>
+<div class="book-header" role="navigation">
+    
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Lighting tutorial</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#instance-process"><b> </b>Instance process</a></li><li><span class="title-icon "></span><a href="#verilog-prerequisites"><b> </b>Verilog Prerequisites</a></li><li><span class="title-icon "></span><a href="#pin-usage"><b> </b>Pin usage</a></li><li><span class="title-icon "></span><a href="#programming"><b> </b>Programming</a></li><li><span class="title-icon "></span><a href="#pin-constraint"><b> </b>Pin constraint</a></li><li><span class="title-icon "></span><a href="#synthesis"><b> </b>Synthesis</a></li><li><span class="title-icon "></span><a href="#programe"><b> </b>Programe</a></li><ul><li><span class="title-icon "></span><a href="#change-the-burning-position"><b>1. </b>Change the burning position</a></li><li><span class="title-icon "></span><a href="#burning"><b>2. </b>Burning</a></li></ul></ul></div><a href="#instance-process" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="instance-process"><a name="instance-process" class="anchor-navigation-ex-anchor" href="#instance-process"><i class="fa fa-link" aria-hidden="true"></i></a> Instance process</h1>
+<p>New Project -&gt; Add Source Code File -&gt; Add Timing, Pin Constraints -&gt; Synthesis -&gt; Programe</p>
+<p>Before reading this document, please make sure you have seen [Gowin Cloud Source Software User Guide] (<a href="http://cdn.gowinsemi.com.cn/SUG100-1.8_Gowin%E4%BA%91%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.pdf" target="_blank">http://cdn.gowinsemi.com.cn/SUG100-1.8_Gowin%E4%BA%91%E6%BA%90%E8%BD%AF%E4%BB%B6%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.pdf</a>), Chapter 5 Cloud Source Software Usage</p>
+<p>The source code of this experiment: <a href="https://github.com/sipeed/Tang-Nano-examples/tree/master/ Example_led" target="_blank">https://github.com/sipeed/Tang-Nano-examples/tree/master/example_led</a></p>
+<h1 id="verilog-prerequisites"><a name="verilog-prerequisites" class="anchor-navigation-ex-anchor" href="#verilog-prerequisites"><i class="fa fa-link" aria-hidden="true"></i></a> Verilog Prerequisites</h1>
+<p>Here only introduce the relevant syntax that will be used next, more can refer to <a href="http://www.asic-world.com/verilog/veritut.html" target="_blank">Verilog Tutorial</a></p>
+<p>The basic design unit of Verilog is the module, and each Verilog program consists of four main parts: port definition, I/O description, internal signal declaration and function definition.</p>
+<p>The module is like the black box we usually mentioned. When we implement the module, we don&apos;t need to care about the inside of the module. We only need to instantiate the module according to the input and output format defined by the module, and provide input to the module. Already working</p>
+<p>a module grows like this</p>
+<pre><code>module block (input a, output b);
+reg [width-1:0] R_1;
+
+assign b = a;
+always @(posedge clk or negedge reset_n)
+begin
+// do something
+end
+
+endmodule
+</code></pre><p>The overall structure of the module consists of module and endmodule. The module is followed by the definition of the module interface, which declares whether the direction of the port is input or output.</p>
+<p>Internal signals are sometimes used inside the module, and the internal signals are of type wire and reg.</p>
+<p>The definition of the function can be done through the assign and always blocks. Assign is one of the most common methods for describing combinatorial logic; always a block machine can be used to describe combinatorial logic, as well as to describe sequential logic</p>
+<h1 id="pin-usage"><a name="pin-usage" class="anchor-navigation-ex-anchor" href="#pin-usage"><i class="fa fa-link" aria-hidden="true"></i></a> Pin usage</h1>
+<p>The onboard is a RGB(tri-color) LED, the schematic is as follows</p>
+<p><img src="../../assets/examples/led_pjt_1.png" alt=""></p>
+<p>The pin distribution used by the entire program is as follows</p>
+<table>
+<thead>
+<tr>
+<th>port</th>
+<th>I/O</th>
+<th>pin</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sys_clk</td>
+<td>input</td>
+<td>35</td>
+<td>Clock Input Pin</td>
+</tr>
+<tr>
+<td>sys_rst_n</td>
+<td>input</td>
+<td>15</td>
+<td>System Reset Foot</td>
+</tr>
+<tr>
+<td>led[0]</td>
+<td>output</td>
+<td>16</td>
+<td>Green LED</td>
+</tr>
+<tr>
+<td>led[1]</td>
+<td>output</td>
+<td>17</td>
+<td>Blue LED</td>
+</tr>
+<tr>
+<td>led[2]</td>
+<td>output</td>
+<td>18</td>
+<td>Red LED</td>
+</tr>
+</tbody>
+</table>
+<h1 id="programming"><a name="programming" class="anchor-navigation-ex-anchor" href="#programming"><i class="fa fa-link" aria-hidden="true"></i></a> Programming</h1>
+<p>The clock of this system is 24Mhz, one machine cycle is 1/24M s, which means 0.5s every 12000000 clock cycles.</p>
+<p>In the program, calculate 12000000 clock cycles by counter, and wait for 0.5s. After the time is up, set counter to 0 and change the color of the LED.</p>
+<pre><code>module led (
+    input sys_clk, // clk input
+    input sys_rst_n, // reset input
+    output reg [2:0] led // 110 G, 101 R, 011 B
+);
+
+reg [23:0] counter;
+
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        counter &lt;= 24&apos;d0;
+    else if (counter &lt; 24&apos;d1200_0000) // 0.5s delay
+        counter &lt;= counter + 1;
+    else
+        counter &lt;= 24&apos;d0;
+end
+
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        led &lt;= 3&apos;b110;
+    else if (counter == 24&apos;d1200_0000) // 0.5s delay
+        led[2:0] &lt;= {led[1:0], led[2]};
+    else
+        led &lt;= led;
+end
+
+endmodule
+</code></pre><h1 id="pin-constraint"><a name="pin-constraint" class="anchor-navigation-ex-anchor" href="#pin-constraint"><i class="fa fa-link" aria-hidden="true"></i></a> Pin constraint</h1>
+<p>In order for fpga to implement the function of the code, it is also necessary to constrain the pin operations involved in the code to the actual pins of fpga.</p>
+<p>As shown below, click process in the workspace on the left, then double-click FloorPlanner</p>
+<p><img src="../../assets/examples/led_pjt_2.png" alt=""></p>
+<p>The first click in the project, you may be prompted to create a file, click OK</p>
+<p>In the pop-up window, switch to Package View, drag the port under Ports to the corresponding pin of fpga, save it, as shown below</p>
+<p><img src="../../assets/examples/led_pjt_3.png" alt=""></p>
+<h1 id="synthesis"><a name="synthesis" class="anchor-navigation-ex-anchor" href="#synthesis"><i class="fa fa-link" aria-hidden="true"></i></a> Synthesis</h1>
+<p>In the workspace on the left, right-click Synthesize or Place&amp;Route, there will be a run option, click</p>
+<p><img src="../../assets/examples/led_pjt_4.png" alt=""></p>
+<h1 id="programe"><a name="programe" class="anchor-navigation-ex-anchor" href="#programe"><i class="fa fa-link" aria-hidden="true"></i></a> Programe</h1>
+<p>There are two options, one is to burn to sram, the other is to burn to flash.</p>
+<p>Burning to sram is faster, but there is no firmware in fpga after power-off; burning to flash can save the firmware before burning after the system is powered off.</p>
+<p>Burning is done through the Programer</p>
+<p>Double-click on the Program Device in the left workspace to open the Programer.</p>
+<p><img src="../../assets/examples/led_pjt_5.png" alt=""></p>
+<p>However, before using Programer, you need to be aware that you can use Programer after both Synthesize and Place&amp;Route are completed, otherwise the software will report error <code>Bitstream file dose not exists</code></p>
+<p><img src="../../assets/examples/led_pjt_6.png" alt=""></p>
+<p>Linux users need to pay attention</p>
+<blockquote>
+<p>The programmer in the Linux installation package is for Linux version Red Hat 5.10. For the Red Hat 6/7 version of the programmer, please download the installation on the official website and replace the installation package with the file in the Gowin cloud source software installation package. Clip &quot;Programmer&quot;.</p>
+</blockquote>
+<h2 id="change-the-burning-position"><a name="change-the-burning-position" class="anchor-navigation-ex-anchor" href="#change-the-burning-position"><i class="fa fa-link" aria-hidden="true"></i></a>1. Change the burning position</h2>
+<p>To select the location where the firmware is programmed, you can click Edit -&gt; Configure Device when the chip is selected.</p>
+<p><img src="../../assets/examples/led_pjt_7.png" alt=""></p>
+<p>In the pop-up window, select the location you want to burn. The flash is selected here. The default burning location is sram.</p>
+<p><img src="../../assets/examples/led_pjt_8.png" alt=""></p>
+<h2 id="burning"><a name="burning" class="anchor-navigation-ex-anchor" href="#burning"><i class="fa fa-link" aria-hidden="true"></i></a>2. Burning</h2>
+<p>After selecting the burning location, you can burn the firmware, click on the menu bar to burn.</p>
+<p><img src="../../assets/examples/led_pjt_9.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../get_started/install-the-ide.html" class="navigation navigation-prev " aria-label="Previous page: IDE installation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2_lcd.html" class="navigation navigation-next " aria-label="Next page: Point LCD tutorial">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lighting tutorial","level":"3.1","depth":1,"next":{"title":"Point LCD tutorial","level":"3.2","depth":1,"path":"examples/2_lcd.md","ref":"examples/2_lcd.md","articles":[]},"previous":{"title":"IDE installation","level":"2.1","depth":1,"path":"get_started/install-the-ide.md","ref":"get_started/install-the-ide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["my-toolbar","-lunr","-search","search-title","anchor-navigation-ex","anchorjs","sharing","splitter","edit-link","ga","expandable-chapters-small@git+https://github.com/sipeed/gitbook-plugin-expandable-chapters-small.git"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/sipeed/"},"splitter":{},"search":{"maxIndexSize":1000000000},"lunr":{"maxIndexSize":1000000000},"fontsettings":{"theme":"white","family":"sans","size":2},"search-title":{},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"fa fa-angle-double-right","level2Icon":"fa fa-angle-double-right","level3Icon":"fa fa-angle-double-right","showLevelIcon":true},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-small":{},"my-toolbar":{"buttons":[{"label":"Github","text":" ","icon":"fa fa-github","position":"left","target":"_blank","url":"https://github.com/sipeed/"}]},"ga":{"configuration":"auto","token":"UA-119047820-3"},"sharing":{"qq":false,"all":["weibo","facebook","google","twitter","vk"],"douban":false,"facebook":true,"weibo":true,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":false,"google":true,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"edit-link":{"label":"","base":"https://github.com/sipeed/Tang-Nano-DOC/blob/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","author":"sipeed","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"items":[{"name":"Blog","link":"http://blog.sipeed.com"},{"name":"BBS","link":"https://bbs.sipeed.com/"},{"name":"Feedback","links":[{"name":"doc","link":"https://github.com/sipeed/Tang-Nano-DOC/issues"},{"name":"Source code","link":"https://github.com/sipeed/Tang-Nano-DOC/issues"}]}],"version":[{"name":"<i class='fa fa-angle-down'></i>","links":[{"name":"master","link":"/en/"},{"name":"dev","link":"/dev/en/"}]}]},"title":"Tang Nano DOC","language":"en","gitbook":"*","description":"Tang Nano documentation"},"file":{"path":"examples/1_led.md","mtime":"2020-02-16T09:16:19.919Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-16T09:17:17.901Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-my-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-title/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-title/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script type="text/javascript">
+    function toggleLanguage () {
+            var path = location.href;
+            // console.log(path);
+            if (path.indexOf('/zh') !== -1) {
+                path = path.replace(/\/zh[\/$\s]/i, '/en/');
+            } else if (path.indexOf('/en') !== -1) {
+                path = path.replace(/\/en[\/$\s]/i, '/zh/');
+            }
+            // console.log('after: ' + path);    
+            location.assign(path);
+    }
+    </script>
+
+    </body>
+</html>
+
