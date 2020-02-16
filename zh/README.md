@@ -28,6 +28,10 @@ Lichee Tang Nano 是基于高云小蜜蜂系列 GW1N-1 FPGA 的简约型开发�
 + 24MHz晶振
 + USB调试器，基于Type-C通讯接口
 
+## 引脚定义
+
+![](../assets/tang_nano_pinout_v1.0.0_w5676_h4000_large.png)
+
 ## 资源下载链接
 
 + [高云官方下载站](http://www.gowinsemi.com.cn/faq.aspx)

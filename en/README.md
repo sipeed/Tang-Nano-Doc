@@ -28,6 +28,10 @@ The board's onboard 24MHz crystal and USB to JTAG downloader make it easy to con
 + 24MHz crystal
 + USB debugger, based on Type-C communication interface
 
+## Pinout Diagram
+
+![](../assets/tang_nano_pinout_v1.0.0_w5676_h4000_large.png)
+
 ## Resource download link
 
 + [GoWin official download station](http://www.gowinsemi.com.cn/faq.aspx)
